@@ -36,15 +36,11 @@ for num in y_cat:
 X = X_dog
 y = y_dog
 
-X = np.array(X)
-y = np.array(y)
-
 xy = list(zip(X, y))
 random.shuffle(xy)
 X, y = zip(*xy)
 X = np.array(list(X))
 y = np.array(list(y))
-
 
 model = keras.Sequential()
 filters = 32
@@ -64,7 +60,6 @@ model.fit(X, y, batch_size=80, epochs=2)
 
 model.save_weights("photo_cat_dogs_model_3")
 model.load_weights("photo_cat_dogs_model_3")
-
 
 def predict_animal(image_path):
     the_path = 'C:\\Users\\arnie2014\\Desktop'
