@@ -36,19 +36,6 @@ for num in y_cat:
 X = X_dog
 y = y_dog
 
-shape_0 = 0
-shape_1 = 0
-for arr in X:
-    arr = np.array(arr)
-    try:
-        arr.shape[1]
-    except:
-        arr = arr.reshape(-1,1)
-    if arr.shape[0] > shape_0:
-        shape_0 = arr.shape[0]
-    if arr.shape[1] > shape_1:
-        shape_1 = arr.shape[1]
-
 X = np.array(X)
 y = np.array(y)
 
